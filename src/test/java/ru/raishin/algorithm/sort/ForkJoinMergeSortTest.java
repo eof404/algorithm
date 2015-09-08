@@ -7,14 +7,13 @@ import org.junit.Test;
  * @author raishin
  *
  */
-public class MergeSortTest extends SortTestBase {
+public class ForkJoinMergeSortTest extends SortTestBase {
 
-    private MergeSort mergeSort;
+    private ForkJoinMergeSort mergeSort;
 
     @Test
     public void sortTest() {
-        mergeSort = new MergeSort();
+        mergeSort = new ForkJoinMergeSort();
         internalSortTest(mergeSort);
     }
-
 }

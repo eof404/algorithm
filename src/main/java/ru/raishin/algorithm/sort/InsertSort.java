@@ -13,6 +13,5 @@ public class InsertSort implements Sorter {
             for (int j = i; j > 0 && source[j - 1] > source[j]; j--)
                 ArrayUtils.swap(source, j - 1, j);
         }
-    }    
-
+    }
 }

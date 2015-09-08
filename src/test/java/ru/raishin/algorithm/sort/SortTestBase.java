@@ -8,24 +8,24 @@ import org.junit.Before;
 
 public abstract class SortTestBase {
 
-	protected int arraySize = 10000;
-	protected int[] array;
-	protected int[] sortedArray;
+    protected int arraySize = 100000;
+    protected int[] sourceArray;
+    protected int[] sortedArray;
 
-	@Before
-	public void populateArray() {
-		array = new int[arraySize];
-		Random random = new Random();
-		for (int i = 0; i < arraySize; i++) {
-			array[i] = random.nextInt(10);
-		}
-		sortedArray = Arrays.copyOf(array, array.length);
-		Arrays.sort(sortedArray);
-	}
-	
-	
-	protected void internalSortTest(Sorter sorter){		
-		sorter.sort(array);
-		Assert.assertArrayEquals(sortedArray, array);
-	}
+    @Before
+    public void populateArray() {
+        sourceArray = new int[arraySize];
+        Random random = new Random();
+        for (int i = 0; i < arraySize; i++) {
+            sourceArray[i] = random.nextInt(arraySize);
+        }
+        sortedArray = Arrays.copyOf(sourceArray, sourceArray.length);
+        Arrays.sort(sortedArray);
+    }
+
+    protected void internalSortTest(Sorter sorter) {
+        int[] arrayToSort=Arrays.copyOf(sourceArray, sourceArray.length);
+        sorter.sort( arrayToSort);
+        Assert.assertArrayEquals(sortedArray, arrayToSort);
+    }
 }
