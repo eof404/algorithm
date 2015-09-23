@@ -1,6 +1,5 @@
 package ru.raishin.algorithm.sort;
 
-import java.util.Arrays;
 
 /**
  * Class represent quick sort algorithm implementation
