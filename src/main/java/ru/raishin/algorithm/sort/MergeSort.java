@@ -8,8 +8,8 @@ package ru.raishin.algorithm.sort;
  */
 public class MergeSort implements Sorter {
 
-    public void sort(int[] a) {
-        a = mergeSort(a, 0, a.length - 1);
+    public void sort(int[] array) {
+        array = mergeSort(array, 0, array.length - 1);
     }
 
     private int[] mergeSort(int[] a, int left, int right) {

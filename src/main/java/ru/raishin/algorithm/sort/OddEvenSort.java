@@ -8,15 +8,15 @@ package ru.raishin.algorithm.sort;
  */
 public class OddEvenSort implements Sorter {
 
-    public void sort(int[] a) {
+    public void sort(int[] array) {
         boolean sorted = false;
 
         for (int iterationCount = 0, noSwapPassCount = 0; !sorted && noSwapPassCount != 2; iterationCount++) {
             sorted = true;
             noSwapPassCount++;
-            for (int i = iterationCount % 2; i < a.length - 1; i += 2) {
-                if (a[i] > a[i + 1]) {
-                    ArrayUtils.swap(a, i, i + 1);
+            for (int i = iterationCount % 2; i < array.length - 1; i += 2) {
+                if (array[i] > array[i + 1]) {
+                    ArrayUtils.swap(array, i, i + 1);
                     sorted = false;
                     noSwapPassCount = 0;
                 }

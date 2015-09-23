@@ -12,9 +12,9 @@ import java.util.concurrent.RecursiveAction;
  */
 public class ForkJoinMergeSort implements Sorter {
 
-    public void sort(int[] a) {
+    public void sort(int[] array) {
         ForkJoinPool pool = new ForkJoinPool(2);
-        pool.invoke(new MergeSortTask(a, 0, a.length - 1));
+        pool.invoke(new MergeSortTask(array, 0, array.length - 1));
     }
 
     class MergeSortTask extends RecursiveAction {

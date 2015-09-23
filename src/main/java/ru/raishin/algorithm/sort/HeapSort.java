@@ -10,14 +10,14 @@ public class HeapSort implements Sorter {
 
     private int heapSize;
 
-    public void sort(int[] a) {
-        heapSize = a.length - 1;
-        buildHeap(a);
+    public void sort(int[] array) {
+        heapSize = array.length - 1;
+        buildHeap(array);
 
-        for (int i = a.length - 1; i > 0; i--) {
-            ArrayUtils.swap(a, i, 0);
+        for (int i = array.length - 1; i > 0; i--) {
+            ArrayUtils.swap(array, i, 0);
             heapSize--;
-            heapify(a, 0);
+            heapify(array, 0);
         }
 
     }

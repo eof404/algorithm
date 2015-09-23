@@ -8,18 +8,18 @@ package ru.raishin.algorithm.sort;
  */
 public class ShakeSort implements Sorter {
 
-    public void sort(int[] a) {
+    public void sort(int[] array) {
         boolean sorted = false;
         for (int iterationCount = 0; !sorted; iterationCount++) {
             sorted = true;
-            for (int i = 0; i < a.length - iterationCount - 1; i++) {
-                if (a[i] > a[i + 1]) {
-                    ArrayUtils.swap(a, i, i + 1);
+            for (int i = 0; i < array.length - iterationCount - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    ArrayUtils.swap(array, i, i + 1);
                 }
             }
-            for (int i = a.length - iterationCount - 1; i > iterationCount; i--) {
-                if (a[i] < a[i - 1]) {
-                    ArrayUtils.swap(a, i, i - 1);
+            for (int i = array.length - iterationCount - 1; i > iterationCount; i--) {
+                if (array[i] < array[i - 1]) {
+                    ArrayUtils.swap(array, i, i - 1);
                     sorted = false;
                 }
             }

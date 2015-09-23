@@ -10,9 +10,9 @@ import java.util.Arrays;
  */
 public class QuickSort implements Sorter {
 
-    public void sort(int[] a) {
-        System.out.println(Arrays.toString(a));
-        quickSort(a, 0, a.length - 1);
+    public void sort(int[] array) {
+        System.out.println(Arrays.toString(array));
+        quickSort(array, 0, array.length - 1);
     }
 
     /**
