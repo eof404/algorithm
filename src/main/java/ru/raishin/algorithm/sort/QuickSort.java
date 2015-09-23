@@ -11,7 +11,6 @@ import java.util.Arrays;
 public class QuickSort implements Sorter {
 
     public void sort(int[] array) {
-        System.out.println(Arrays.toString(array));
         quickSort(array, 0, array.length - 1);
     }
 
