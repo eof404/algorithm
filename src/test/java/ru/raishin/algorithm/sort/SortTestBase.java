@@ -20,11 +20,10 @@ public abstract class SortTestBase {
     @Before
     public void populateArray() {
         sourceArray = new int[arraySize];
-         sourceArray = new int[] { 8, 1, 2, 3, 6, 0, 9, 0, 3, 0 };
-//        Random random = new Random();
-//        for (int i = 0; i < arraySize; i++) {
-//            sourceArray[i] = random.nextInt(arraySize);
-//        }
+        Random random = new Random();
+        for (int i = 0; i < arraySize; i++) {
+            sourceArray[i] = random.nextInt(arraySize);
+        }
         sortedArray = Arrays.copyOf(sourceArray, sourceArray.length);
         Arrays.sort(sortedArray);
     }
